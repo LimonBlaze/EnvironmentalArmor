@@ -29,13 +29,12 @@
 
   "text.autoconfig.environmental_armor_config.title": "环境盔甲 设置",
   "text.autoconfig.environmental_armor_config.option.glass": "玻璃",
-  "text.autoconfig.environmental_armor_config.option.enableGlassBowl": "启用玻璃鱼缸",
-  "text.autoconfig.environmental_armor_config.option.enableGlassHelmet": "启用玻璃头盔",
-  "text.autoconfig.environmental_armor_config.option.enableGlasses": "启用末影眼镜",
+  "text.autoconfig.environmental_armor_config.option.glass.enableGlassBowl": "启用玻璃鱼缸",
+  "text.autoconfig.environmental_armor_config.option.glass.enableGlassHelmet": "启用玻璃头盔",
+  "text.autoconfig.environmental_armor_config.option.glass.enableGlasses": "启用末影眼镜",
   "text.autoconfig.environmental_armor_config.option.titanium": "钛",
   "text.autoconfig.environmental_armor_config.option.titanium.enable": "启用",
   "text.autoconfig.environmental_armor_config.option.titanium.enableArmor": "启用钛盔甲",
-  "text.autoconfig.environmental_armor_config.option.titanium.enableAirFilter": "启用空气净化器",
   "text.autoconfig.environmental_armor_config.option.titanium.enableTitaniumCoatedGlassBowl": "启用镀钛玻璃鱼缸",
   "text.autoconfig.environmental_armor_config.option.titanium.enableTitaniumCoatedGlassHelmet": "启用镀钛玻璃头盔",
   "text.autoconfig.environmental_armor_config.option.titanium.enableWorldGen": "生成钛矿石",
@@ -51,5 +50,7 @@
   "text.autoconfig.environmental_armor_config.option.waterResistance.shortDuration": "药水时长（短）",
   "text.autoconfig.environmental_armor_config.option.waterResistance.longDuration": "药水时长（长）",
   "text.autoconfig.environmental_armor_config.option.waterResistance.potionIngredient": "药水酿造原料（药水）",
-  "text.autoconfig.environmental_armor_config.option.waterResistance.itemIngredient": "药水酿造原料（物品）"
+  "text.autoconfig.environmental_armor_config.option.waterResistance.itemIngredient": "药水酿造原料（物品）",
+  "text.autoconfig.environmental_armor_config.option.airFilter": "空气净化器",
+  "text.autoconfig.environmental_armor_config.option.airFilter.enable": "启用"
 }

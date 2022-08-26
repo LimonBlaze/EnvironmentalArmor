@@ -29,13 +29,12 @@
 
   "text.autoconfig.environmental_armor_config.title": "Environmental Armor Config",
   "text.autoconfig.environmental_armor_config.option.glass": "Glass",
-  "text.autoconfig.environmental_armor_config.option.enableGlassBowl": "Enable Glass Bowl",
-  "text.autoconfig.environmental_armor_config.option.enableGlassHelmet": "Enable Glass Helmet",
-  "text.autoconfig.environmental_armor_config.option.enableGlasses": "Enable Ender Glasses",
+  "text.autoconfig.environmental_armor_config.option.glass.enableGlassBowl": "Enable Glass Bowl",
+  "text.autoconfig.environmental_armor_config.option.glass.enableGlassHelmet": "Enable Glass Helmet",
+  "text.autoconfig.environmental_armor_config.option.glass.enableGlasses": "Enable Ender Glasses",
   "text.autoconfig.environmental_armor_config.option.titanium": "Titanium",
   "text.autoconfig.environmental_armor_config.option.titanium.enable": "Enable",
   "text.autoconfig.environmental_armor_config.option.titanium.enableArmor": "Enable Titanium Armor",
-  "text.autoconfig.environmental_armor_config.option.titanium.enableAirFilter": "Enable Air Filter",
   "text.autoconfig.environmental_armor_config.option.titanium.enableTitaniumCoatedGlassBowl": "Enable Titanium Coated Glass Bowl",
   "text.autoconfig.environmental_armor_config.option.titanium.enableTitaniumCoatedGlassHelmet": "Enable Titanium Coated Glass Helmet",
   "text.autoconfig.environmental_armor_config.option.titanium.enableWorldGen": "Enable Titanium WorldGen",
@@ -51,5 +50,7 @@
   "text.autoconfig.environmental_armor_config.option.waterResistance.shortDuration": "Potion Duration(Short)",
   "text.autoconfig.environmental_armor_config.option.waterResistance.longDuration": "Potion Duration(Long)",
   "text.autoconfig.environmental_armor_config.option.waterResistance.potionIngredient": "Potion Ingredient",
-  "text.autoconfig.environmental_armor_config.option.waterResistance.itemIngredient": "Item Ingredient"
+  "text.autoconfig.environmental_armor_config.option.waterResistance.itemIngredient": "Item Ingredient",
+  "text.autoconfig.environmental_armor_config.option.airFilter": "Air Filter",
+  "text.autoconfig.environmental_armor_config.option.airFilter.enable": "Enable"
 }

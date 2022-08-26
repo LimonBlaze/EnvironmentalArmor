@@ -22,8 +22,6 @@ public abstract class LivingEntityMixin extends Entity {
 
     @Shadow public abstract boolean addStatusEffect(StatusEffectInstance effect);
 
-    @Shadow public abstract boolean hasStatusEffect(StatusEffect effect);
-
     @Shadow public abstract ItemStack getEquippedStack(EquipmentSlot slot);
     
     public LivingEntityMixin(EntityType<?> type, World world) {
@@ -33,7 +31,6 @@ public abstract class LivingEntityMixin extends Entity {
     @Inject(at = @At("HEAD"), method = "tick")
     private void tick(CallbackInfo info) {
         if(age % 20 != 0) return;
-        if(hasStatusEffect(StatusEffects.WATER_BREATHING)) return;
         boolean submerged = isSubmergedInWater();
         ItemStack helmet = getEquippedStack(EquipmentSlot.HEAD);
         boolean rightHelmet = submerged ?

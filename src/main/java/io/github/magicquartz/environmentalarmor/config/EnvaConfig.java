@@ -7,7 +7,7 @@ import me.shedaniel.autoconfig.annotation.ConfigEntry;
 import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment;
 
 @Config(name = "environmental_armor_config")
-@Background("enva:textures/blocks/titanium_block")
+@Background("enva:textures/blocks/titanium_block.png")
 public class EnvaConfig implements ConfigData {
     
     @ConfigEntry.Gui.CollapsibleObject
