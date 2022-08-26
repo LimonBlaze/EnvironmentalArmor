@@ -1,4 +1,4 @@
-package io.github.magicquartz.environmentalarmor.armor;
+package io.github.magicquartz.environmentalarmor.item.material.armor;
 
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;

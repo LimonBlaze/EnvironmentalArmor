@@ -1,6 +1,5 @@
-package io.github.magicquartz.environmentalarmor.armor;
+package io.github.magicquartz.environmentalarmor.item.material.armor;
 
-import io.github.magicquartz.environmentalarmor.registry.ModItems;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
 import net.minecraft.item.Items;
@@ -8,15 +7,15 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
 
-public class TitaniumCoatedArmorMaterial implements ArmorMaterial {
+public class GlassArmorMaterial implements ArmorMaterial {
     @Override
     public int getDurability(EquipmentSlot slot) {
-        return 165;
+        return 5;
     }
 
     @Override
     public int getProtectionAmount(EquipmentSlot slot) {
-        return 2;
+        return 1;
     }
 
     @Override
@@ -31,12 +30,12 @@ public class TitaniumCoatedArmorMaterial implements ArmorMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(ModItems.TITANIUM_INGOT);
+        return Ingredient.ofItems(Items.GLASS);
     }
 
     @Override
     public String getName() {
-        return "titanium_coated_glass";
+        return "glass";
     }
 
     @Override

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "enva:glasses",
+      "required": false
+    }
+  ]
+}

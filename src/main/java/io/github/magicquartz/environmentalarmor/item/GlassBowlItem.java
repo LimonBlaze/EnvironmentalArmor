@@ -1,12 +1,12 @@
 package io.github.magicquartz.environmentalarmor.item;
 
-import io.github.magicquartz.environmentalarmor.registry.ModArmor;
-import net.minecraft.block.*;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.FluidDrainable;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.fluid.Fluids;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.sound.SoundEvents;
-import net.minecraft.util.ActionResult;
+import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.hit.BlockHitResult;
@@ -14,28 +14,35 @@ import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.RaycastContext;
 import net.minecraft.world.World;
+import net.minecraft.world.event.GameEvent;
 
 public class GlassBowlItem extends Item {
-
-    public GlassBowlItem(Settings settings) {
+    private final Item filled;
+    
+    public GlassBowlItem(Settings settings, Item filled) {
         super(settings);
+        this.filled = filled;
     }
 
     @Override
-    public TypedActionResult<ItemStack> use(World world, PlayerEntity playerEntity, Hand hand){
-        BlockHitResult blockHit = raycast(world, playerEntity, RaycastContext.FluidHandling.SOURCE_ONLY);
+    public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand){
+        BlockHitResult blockHit = raycast(world, user, RaycastContext.FluidHandling.SOURCE_ONLY);
         if(blockHit.getType().equals(HitResult.Type.BLOCK)) {
-            BlockPos blockPos = blockHit.getBlockPos();
-            BlockState blockState = world.getBlockState(blockPos);
-            if(blockState.getMaterial().equals(Material.WATER)) {
-                playerEntity.playSound(SoundEvents.ITEM_BUCKET_FILL, 1.0F, 1.0F);
-                world.setBlockState(blockPos, Blocks.AIR.getDefaultState());
-                return new TypedActionResult<>(ActionResult.SUCCESS,  new ItemStack(ModArmor.WATER_GLASS_BOWL, 1));
-            } else {
-                return new TypedActionResult<>(ActionResult.PASS, playerEntity.getStackInHand(hand));
+            BlockPos pos = blockHit.getBlockPos();
+            if (world.canPlayerModifyAt(user, pos)) {
+                BlockState state = world.getBlockState(pos);
+                if (world.getFluidState(pos).isOf(Fluids.WATER) &&
+                    state.getBlock() instanceof FluidDrainable drainable &&
+                    !drainable.tryDrainFluid(world, pos, state).isEmpty()
+                ) {
+                    user.incrementStat(Stats.USED.getOrCreateStat(this));
+                    drainable.getBucketFillSound().ifPresent((sound) -> user.playSound(sound, 1.0F, 1.0F));
+                    world.emitGameEvent(user, GameEvent.FLUID_PICKUP, pos);
+                    return TypedActionResult.success(filled.getDefaultStack(), world.isClient);
+                }
             }
-        } else {
-            return new TypedActionResult<>(ActionResult.PASS, playerEntity.getStackInHand(hand));
         }
+        return TypedActionResult.pass(user.getStackInHand(hand));
     }
+    
 }

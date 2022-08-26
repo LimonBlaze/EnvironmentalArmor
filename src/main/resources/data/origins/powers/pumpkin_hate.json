@@ -1,4 +1,5 @@
 {
+  "loading_priority": 1000,
   "type": "origins:multiple",
   "prevent_eating": {
     "type": "origins:prevent_item_use",
@@ -10,6 +11,7 @@
     }
   },
   "prevent_seeing": {
+    "loading_priority": 1000,
     "type": "origins:prevent_entity_render",
     "entity_condition": {
       "type": "origins:equipped_item",
@@ -27,7 +29,7 @@
       "item_condition": {
         "type": "origins:ingredient",
         "ingredient": {
-          "item": "enva:glasses"
+          "tag": "enva:ender_glasses"
         }
       },
       "inverted": true

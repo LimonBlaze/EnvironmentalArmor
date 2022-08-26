@@ -1,4 +1,5 @@
 {
+  "loading_priority": 1000,
   "type": "origins:burn",
   "interval": 20,
   "burn_duration": 6,

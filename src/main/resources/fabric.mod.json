@@ -6,11 +6,12 @@
   "name": "Environmental Armor",
   "description": "Adds items, armor, and potions to protect players from certain origins.",
   "authors": [
-    "MagicQuartz"
+    "MagicQuartz",
+    "LimonBlaze"
   ],
   "contact": {
-    "homepage": "",
-    "sources": ""
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/environmental-armor",
+    "sources": "https://github.com/LimonBlaze/EnvironmentalArmor"
   },
 
   "license": "CC0-1.0",
@@ -19,7 +20,10 @@
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.magicquartz.environmentalarmor.Main"
+      "io.github.magicquartz.environmentalarmor.Enva"
+    ],
+    "modmenu": [
+      "io.github.magicquartz.environmentalarmor.config.ModMenuIntegration"
     ]
   },
   "mixins": [
@@ -27,12 +31,11 @@
   ],
 
   "depends": {
-    "fabricloader": ">=0.11.3",
+    "java": ">=17",
+    "fabricloader": ">=0.12.3",
     "fabric": "*",
-    "minecraft": "1.17.x",
-    "java": ">=16"
-  },
-  "suggests": {
-    "another-mod": "*"
+    "minecraft": "1.19.x",
+    "origins": ">=1.6.0",
+    "cloth-config2": ">=5.0.0"
   }
 }

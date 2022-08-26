@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "enva:water_glass_bowl",
+      "required": false
+    },
+    {
+      "id": "enva:titanium_coated_water_glass_bowl",
+      "required": false
+    }
+  ]
+}

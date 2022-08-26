@@ -5,9 +5,8 @@
   "compatibilityLevel": "JAVA_16",
   "mixins": [
     "LivingEntityMixin",
-    "PlayerEntityMixin",
     "BrewingRecipeRegistryMixin",
-    "BrewingRecipeRegistryAccessor",
+    "BrewingRecipeRegistryMixin",
     "FirstApril"
   ],
   "client": [

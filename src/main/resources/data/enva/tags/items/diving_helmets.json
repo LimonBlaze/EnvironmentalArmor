@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "enva:glass_helmet",
+      "required": false
+    },
+    {
+      "id": "enva:titanium_coated_glass_helmet",
+      "required": false
+    }
+  ]
+}

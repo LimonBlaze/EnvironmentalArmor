@@ -1,4 +1,5 @@
 {
+  "loading_priority": 1000,
   "type": "origins:prevent_sleep",
   "block_condition": {
     "type": "origins:height",
@@ -11,8 +12,8 @@
       "type": "origins:and",
       "conditions": [
         {
-          "type": "origins:block",
-          "block": "enva:air_filter"
+          "type": "origins:in_tag",
+          "tag": "enva:air_filters"
         },
         {
           "type": "origins:block_state",

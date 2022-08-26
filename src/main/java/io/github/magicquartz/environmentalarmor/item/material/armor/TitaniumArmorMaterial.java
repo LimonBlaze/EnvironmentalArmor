@@ -1,9 +1,8 @@
-package io.github.magicquartz.environmentalarmor.armor;
+package io.github.magicquartz.environmentalarmor.item.material.armor;
 
-import io.github.magicquartz.environmentalarmor.registry.ModItems;
+import io.github.magicquartz.environmentalarmor.registry.EnvaItems;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorMaterial;
-import net.minecraft.item.ItemConvertible;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
@@ -35,7 +34,7 @@ public class TitaniumArmorMaterial implements ArmorMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(ModItems.TITANIUM_INGOT);
+        return Ingredient.ofItems(EnvaItems.TITANIUM_INGOT);
     }
 
     @Override
