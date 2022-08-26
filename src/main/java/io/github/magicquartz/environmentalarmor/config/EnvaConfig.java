@@ -25,6 +25,10 @@ public class EnvaConfig implements ConfigData {
     @ConfigEntry.Gui.RequiresRestart
     public WaterResistance waterResistance = new WaterResistance();
     
+    @ConfigEntry.Gui.CollapsibleObject
+    @ConfigEntry.Gui.RequiresRestart
+    public AirFilter airFilter = new AirFilter();
+    
     public static class Glass {
         
         public boolean enableGlassBowl = true;
@@ -37,7 +41,6 @@ public class EnvaConfig implements ConfigData {
         
         public boolean enable = true;
         public boolean enableArmor = true;
-        public boolean enableAirFilter = true;
         public boolean enableTitaniumCoatedGlassBowl = true;
         public boolean enableTitaniumCoatedGlassHelmet = true;
         public boolean enableWorldGen = true;
@@ -72,6 +75,12 @@ public class EnvaConfig implements ConfigData {
         
         @Comment("Registry ID of the item ingredient for Water Resistance potion, Default: minecraft:scute")
         public String itemIngredient = "minecraft:scute";
+        
+    }
+    
+    public static class AirFilter {
+    
+        public boolean enable = true;
         
     }
     

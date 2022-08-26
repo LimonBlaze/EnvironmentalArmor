@@ -34,7 +34,7 @@ public class EnvaBlocks {
         if(Enva.CONFIG.titanium.enable) {
             Registry.register(Registry.BLOCK, Enva.identifier("titanium_ore"), TITANIUM_ORE);
             Registry.register(Registry.BLOCK, Enva.identifier("titanium_block"), TITANIUM_BLOCK);
-            if(Enva.CONFIG.titanium.enableAirFilter) {
+            if(Enva.CONFIG.airFilter.enable) {
                 Registry.register(Registry.BLOCK, Enva.identifier("air_filter"), AIR_FILTER);
             }
         }

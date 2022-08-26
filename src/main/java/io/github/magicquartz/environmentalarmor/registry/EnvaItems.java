@@ -62,7 +62,7 @@ public class EnvaItems {
                 Registry.register(Registry.ITEM, Enva.identifier("titanium_leggings"), EnvaItems.TITANIUM_LEGGINGS);
                 Registry.register(Registry.ITEM, Enva.identifier("titanium_boots"), EnvaItems.TITANIUM_BOOTS);
             }
-            if(Enva.CONFIG.titanium.enableAirFilter) {
+            if(Enva.CONFIG.airFilter.enable) {
                 Registry.register(Registry.ITEM, Enva.identifier("air_filter"), AIR_FILTER);
             }
             if(Enva.CONFIG.sunscreen.enable) {
