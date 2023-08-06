@@ -47,7 +47,7 @@ public abstract class BrewingRecipeRegistryMixin {
         
         if(!Enva.CONFIG.waterResistance.enableLong) return;
         
-        callRegisterPotionRecipe(EnvaEffects.WATER_RESISTANCE_POTION, Items.REDSTONE, EnvaEffects.WATER_RESISTANCE_POTION);
+        callRegisterPotionRecipe(EnvaEffects.WATER_RESISTANCE_POTION, Items.REDSTONE, EnvaEffects.LONG_WATER_RESISTANCE_POTION);
     }
     
 }
